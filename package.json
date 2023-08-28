@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "portfolio starter backend",
+  "main": "index.js",
+  "repository": "https://github.com/awaisdev2/portfolio-starter.git)",
+  "author": "Awais dev",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.5",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1"
+  }
+}
