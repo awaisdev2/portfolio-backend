@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 
 const port = 4500;
 
@@ -15,20 +14,22 @@ app.post('/', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
+        user: 'awaisdev2@gmail.com',
+        pass: 'uabahgdvmybdrnbr',
     },
   });
 
   const mailOptions = {
     from: req.body.email, // Use the user's email as the sender
     to: 'awaisdev2@gmail.com', // Change this to your target email address
-    subject: 'New Contact Form Submission',
+    subject: 'Contact Form Submission',
     html: `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${req.body.name}</p>
-      <p><strong>Email:</strong> ${req.body.email}</p>
-      <p><strong>Message:</strong> ${req.body.message}</p>
+    <div style="background-color: #f0f0f0; align-items: center; height: fit-content; text-align: center; padding: 30px 0;">
+    <h1>Contact Form Submission</h1>
+    <p><strong>Name:</strong> ${req.body.name}</p>
+    <p><strong>Email:</strong> ${req.body.email}</p>
+    <p><strong>Message:</strong> ${req.body.message}</p>
+  </div>
     `,
   };
 
