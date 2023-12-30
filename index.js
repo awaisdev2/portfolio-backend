@@ -20,8 +20,8 @@ app.post('/', (req, res) => {
   });
 
   const mailOptions = {
-    from: req.body.email, // Use the user's email as the sender
-    to: 'awaisdev2@gmail.com', // Change this to your target email address
+    from: req.body.email,
+    to: 'awaisdev2@gmail.com',
     subject: 'Contact Form Submission',
     html: `
     <div style="background-color: #f0f0f0; align-items: center; height: fit-content; text-align: center; padding: 30px 0;">
